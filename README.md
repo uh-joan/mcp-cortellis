@@ -6,27 +6,22 @@ This MCP (Model Context Protocol) server provides an interface to search and exp
 
 ## Prerequisites
 
-- Python 3.8 or higher
-- uv package manager
+- Python 3.10 or higher
+- uv package manager (recommended) or pip
 - Cortellis API credentials
 
 ## Installation
 
-1. Install the MCP server framework:
-```bash
-pip install mcp-server
-```
-
-2. Install this package and its dependencies:
+1. Clone and install the package:
 ```bash
 # Using uv (recommended)
-uv pip install -r requirements.txt
+uv pip install .
 
 # Or using pip
-pip install -r requirements.txt
+pip install .
 ```
 
-3. Set up your environment variables by creating a `.env` file:
+2. Set up your environment variables by creating a `.env` file:
 ```bash
 CORTELLIS_USERNAME=your_username
 CORTELLIS_PASSWORD=your_password
