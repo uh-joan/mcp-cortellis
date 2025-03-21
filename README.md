@@ -12,20 +12,48 @@ This MCP (Model Context Protocol) server provides an interface to search and exp
 
 ## Installation
 
-1. Install the package:
-```bash
-# Using uv (recommended)
-uv pip install git+https://github.com/uh-joan/mcp-cortellis.git
+### Local Installation (Recommended)
 
-# Or using pip
-pip install git+https://github.com/uh-joan/mcp-cortellis.git
+1. Clone the repository:
+```bash
+git clone https://github.com/uh-joan/mcp-cortellis.git
+cd mcp-cortellis
 ```
 
-2. Set up your environment variables:
+2. Install the package:
+```bash
+# Using uv (recommended)
+uv venv
+source .venv/bin/activate  # On Unix/macOS
+# or
+.venv\Scripts\activate  # On Windows
+uv pip install -e .
+
+# Or using pip
+python -m venv .venv
+source .venv/bin/activate  # On Unix/macOS
+# or
+.venv\Scripts\activate  # On Windows
+pip install -e .
+```
+
+3. Set up your environment variables:
 ```bash
 # In your .env file
 CORTELLIS_USERNAME=your_username
 CORTELLIS_PASSWORD=your_password
+```
+
+### Alternative: Install from GitHub
+
+If you just want to use the package without development:
+
+```bash
+# Using uv
+uv pip install git+https://github.com/uh-joan/mcp-cortellis.git
+
+# Or using pip
+pip install git+https://github.com/uh-joan/mcp-cortellis.git
 ```
 
 ## Using with Cursor IDE
@@ -93,22 +121,7 @@ When searching for drugs, you can use these phase codes:
 
 ## Development
 
-To set up for development:
-
-```bash
-# Clone the repository
-git clone https://github.com/uh-joan/mcp-cortellis.git
-cd mcp-cortellis
-
-# Create virtual environment and install dependencies
-uv venv
-source .venv/bin/activate  # On Unix/macOS
-# or
-.venv\Scripts\activate  # On Windows
-
-# Install in editable mode
-uv pip install -e .
-```
+For development work, follow the [Local Installation](#local-installation-recommended) instructions above, which will install the package in editable mode (`-e` flag).
 
 ## License
 
