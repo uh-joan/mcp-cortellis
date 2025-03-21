@@ -6,7 +6,9 @@
 [![Platform: Linux](https://img.shields.io/badge/Platform-Linux-blue.svg)](https://github.com/uh-joan/mcp-cortellis)
 [![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg)](https://github.com/uh-joan/mcp-cortellis)
 
-A production-ready Model Context Protocol (MCP) server that enables AI assistants to search and explore pharmaceutical data through the Cortellis database. Perfect for drug discovery, clinical trial analysis, and pharmaceutical market research.
+A production-ready MCP server enabling AI assistants to search and analyze pharmaceutical data through Cortellis. Features comprehensive drug search, ontology exploration, and real-time clinical trial data access.
+
+Perfect for drug discovery, clinical trial analysis, and pharmaceutical market research, this server enables natural language interactions for complex pharmaceutical queries.
 
 ## Features
 
