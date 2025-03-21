@@ -5,6 +5,18 @@
 [![Quality: A](https://img.shields.io/badge/Quality-A-green.svg)](https://github.com/uh-joan/mcp-cortellis)
 [![Platform: Linux](https://img.shields.io/badge/Platform-Linux-blue.svg)](https://github.com/uh-joan/mcp-cortellis)
 [![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg)](https://github.com/uh-joan/mcp-cortellis)
+[![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![Docker: Ready](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://github.com/uh-joan/mcp-cortellis/blob/main/Dockerfile)
+[![API: Cortellis](https://img.shields.io/badge/API-Cortellis-orange.svg)](https://api.cortellis.com)
+[![Type: MCP](https://img.shields.io/badge/Type-MCP-purple.svg)](https://github.com/uh-joan/mcp-cortellis)
+[![Documentation: Yes](https://img.shields.io/badge/Documentation-Yes-green.svg)](https://github.com/uh-joan/mcp-cortellis/tree/main/docs)
+[![PRs: Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Code Style: Ruff](https://img.shields.io/badge/Code%20Style-Ruff-black.svg)](https://github.com/astral-sh/ruff)
+[![GitHub Issues](https://img.shields.io/github/issues/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis/issues)
+[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis/pulls)
+[![GitHub Stars](https://img.shields.io/github/stars/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis/commits/main)
+[![Repo Size](https://img.shields.io/github/repo-size/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis)
 
 A production-ready MCP server enabling AI assistants to search and analyze pharmaceutical data through Cortellis. Features comprehensive drug search, ontology exploration, and real-time clinical trial data access.
 
