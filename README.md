@@ -1,0 +1,110 @@
+# Cortellis MCP Server
+
+This MCP (Model Context Protocol) server provides an interface to search and explore the Cortellis database for drug-related information. It offers two main functionalities:
+- Drug search with various filters
+- Ontology/taxonomy term exploration
+
+## Prerequisites
+
+- Python 3.8 or higher
+- uv package manager
+- Cortellis API credentials
+
+## Installation
+
+1. Clone this repository:
+```bash
+git clone https://github.com/uh-joan/mcp-cortellis
+cd mcp-cortellis
+```
+
+2. Create a virtual environment and install dependencies using uv:
+```bash
+uv venv
+source .venv/bin/activate  # On Unix/macOS
+# or
+.venv\Scripts\activate  # On Windows
+uv pip install -r requirements.txt
+```
+
+3. Set up your environment variables by creating a `.env` file:
+```bash
+CORTELLIS_USERNAME=your_username
+CORTELLIS_PASSWORD=your_password
+```
+
+## Usage
+
+The server provides two main functions:
+
+### 1. Search Drugs
+
+Search for drugs in the Cortellis database with various filters:
+- Company
+- Indication
+- Action
+- Phase
+- Technology
+- Drug name
+- Country
+
+Example usage:
+```python
+from cortellis_mcp import search_drugs
+
+# Search for a specific drug
+results = search_drugs(drug_name="semaglutide")
+
+# Search with multiple filters
+results = search_drugs(
+    company="Novo Nordisk",
+    indication="obesity",
+    phase="L"  # Launched
+)
+```
+
+### 2. Explore Ontology
+
+Explore the ontology/taxonomy terms in the Cortellis database:
+- Actions
+- Indications
+- Companies
+- Drug names
+- Targets
+- Technologies
+
+Example usage:
+```python
+from cortellis_mcp import explore_ontology
+
+# Search for action terms
+results = explore_ontology(action="glucagon")
+
+# Search for indication terms
+results = explore_ontology(indication="obesity")
+```
+
+## Development Status Codes
+
+When searching for drugs, you can use the following phase codes:
+- `S`: Suspended
+- `DR`: Discovery/Preclinical
+- `CU`: Clinical (unknown phase)
+- `C1`: Phase 1 Clinical
+- `C2`: Phase 2 Clinical
+- `C3`: Phase 3 Clinical
+- `PR`: Pre-registration
+- `R`: Registered
+- `L`: Launched
+- `OL`: Outlicensed
+- `NDR`: No Development Reported
+- `DX`: Discontinued
+- `W`: Withdrawn
+
+## License
+
+[Your License Here]
+
+## Contributing
+
+[Your Contributing Guidelines Here] 
