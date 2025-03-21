@@ -12,19 +12,18 @@ This MCP (Model Context Protocol) server provides an interface to search and exp
 
 ## Installation
 
-1. Clone this repository:
+1. Install the MCP server framework:
 ```bash
-git clone https://github.com/uh-joan/mcp-cortellis
-cd mcp-cortellis
+pip install mcp-server
 ```
 
-2. Create a virtual environment and install dependencies using uv:
+2. Install this package and its dependencies:
 ```bash
-uv venv
-source .venv/bin/activate  # On Unix/macOS
-# or
-.venv\Scripts\activate  # On Windows
+# Using uv (recommended)
 uv pip install -r requirements.txt
+
+# Or using pip
+pip install -r requirements.txt
 ```
 
 3. Set up your environment variables by creating a `.env` file:
