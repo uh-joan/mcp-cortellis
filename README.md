@@ -6,6 +6,12 @@
 [![Documentation: Yes](https://img.shields.io/badge/Documentation-Yes-green.svg)](https://github.com/uh-joan/mcp-cortellis/tree/main/docs)
 [![Type: MCP](https://img.shields.io/badge/Type-MCP-purple.svg)](https://github.com/uh-joan/mcp-cortellis)
 
+<!-- Package Info -->
+[![PyPI version](https://badge.fury.io/py/cortellis-mcp.svg)](https://pypi.org/project/cortellis-mcp/)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
+[![PyPI - Status](https://img.shields.io/pypi/status/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
+
 <!-- Technology Stack -->
 [![Python: 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![Docker: Ready](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://github.com/uh-joan/mcp-cortellis/blob/main/Dockerfile)
@@ -68,7 +74,17 @@ graph LR
 
 ## Installation
 
-### Local Installation (Recommended)
+### From PyPI (Recommended)
+
+```bash
+# Using pip
+pip install cortellis-mcp
+
+# Using uv
+uv pip install cortellis-mcp
+```
+
+### Local Installation (Development)
 
 1. Clone the repository:
 ```bash
