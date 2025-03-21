@@ -6,16 +6,30 @@ build:
   type: docker
   dockerfile: Dockerfile
 
-runtime:
-  type: mcp
-  command: ["python", "-m", "cortellis_mcp"]
-  env:
-    - name: CORTELLIS_USERNAME
-      required: true
-      description: "Your Cortellis API username"
-    - name: CORTELLIS_PASSWORD
-      required: true
-      description: "Your Cortellis API password"
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: ["username", "password"]
+    properties:
+      username:
+        type: string
+        description: "Your Cortellis API username"
+      password:
+        type: string
+        description: "Your Cortellis API password"
+  commandFunction: |
+    function getCommand(config) {
+      return {
+        command: "python",
+        args: ["-m", "cortellis_mcp"],
+        env: {
+          CORTELLIS_USERNAME: config.username,
+          CORTELLIS_PASSWORD: config.password,
+          PYTHONUNBUFFERED: "1"
+        }
+      };
+    }
 
 tools:
   - name: search_drugs
