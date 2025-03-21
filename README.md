@@ -12,99 +12,25 @@ This MCP (Model Context Protocol) server provides an interface to search and exp
 
 ## Installation
 
-1. Clone and install the package:
+1. Install the package:
 ```bash
 # Using uv (recommended)
-uv pip install .
+uv pip install git+https://github.com/uh-joan/mcp-cortellis.git
 
 # Or using pip
-pip install .
+pip install git+https://github.com/uh-joan/mcp-cortellis.git
 ```
 
-2. Set up your environment variables by creating a `.env` file:
+2. Set up your environment variables:
 ```bash
+# In your .env file
 CORTELLIS_USERNAME=your_username
 CORTELLIS_PASSWORD=your_password
 ```
 
-## Usage
-
-The server provides two main functions:
-
-### 1. Search Drugs
-
-Search for drugs in the Cortellis database with various filters:
-- Company
-- Indication
-- Action
-- Phase
-- Technology
-- Drug name
-- Country
-
-Example usage:
-```python
-from cortellis_mcp import search_drugs
-
-# Search for a specific drug
-results = search_drugs(drug_name="semaglutide")
-
-# Search with multiple filters
-results = search_drugs(
-    company="Novo Nordisk",
-    indication="obesity",
-    phase="L"  # Launched
-)
-```
-
-### 2. Explore Ontology
-
-Explore the ontology/taxonomy terms in the Cortellis database:
-- Actions
-- Indications
-- Companies
-- Drug names
-- Targets
-- Technologies
-
-Example usage:
-```python
-from cortellis_mcp import explore_ontology
-
-# Search for action terms
-results = explore_ontology(action="glucagon")
-
-# Search for indication terms
-results = explore_ontology(indication="obesity")
-```
-
-## Development Status Codes
-
-When searching for drugs, you can use the following phase codes:
-- `S`: Suspended
-- `DR`: Discovery/Preclinical
-- `CU`: Clinical (unknown phase)
-- `C1`: Phase 1 Clinical
-- `C2`: Phase 2 Clinical
-- `C3`: Phase 3 Clinical
-- `PR`: Pre-registration
-- `R`: Registered
-- `L`: Launched
-- `OL`: Outlicensed
-- `NDR`: No Development Reported
-- `DX`: Discontinued
-- `W`: Withdrawn
-
 ## Using with Cursor IDE
 
-To use this MCP server with Cursor IDE:
-
-1. Install the server in your project:
-```bash
-uv pip install mcp-cortellis
-```
-
-2. Add the following to your `.cursor/settings.json`:
+Add the following to your `.cursor/settings.json`:
 ```json
 {
   "mcps": {
@@ -119,15 +45,70 @@ uv pip install mcp-cortellis
 }
 ```
 
-3. Restart Cursor IDE
-
-Now you can use the Cortellis MCP commands directly in Cursor. Example prompts:
-
+After restarting Cursor, you can use natural language prompts like:
 - "Search for drugs targeting obesity in phase 3"
 - "Find all launched drugs by Novo Nordisk"
 - "Explore ontology terms related to glucagon"
 
-The MCP server will automatically handle the API calls and return the results in a structured format.
+## Quick Start
+
+```python
+from cortellis_mcp import search_drugs, explore_ontology
+
+# Search for Phase 3 obesity drugs
+results = search_drugs(
+    indication="obesity",
+    phase="C3"  # Phase 3 Clinical
+)
+
+# Explore ontology terms
+terms = explore_ontology(
+    category="indication",
+    term="diabetes"
+)
+```
+
+Check the [examples](examples/) directory for more usage examples.
+
+## API Reference
+
+See the [API documentation](docs/API.md) for detailed function references.
+
+### Development Status Codes
+
+When searching for drugs, you can use these phase codes:
+- `S`: Suspended
+- `DR`: Discovery/Preclinical
+- `CU`: Clinical (unknown phase)
+- `C1`: Phase 1 Clinical
+- `C2`: Phase 2 Clinical
+- `C3`: Phase 3 Clinical
+- `PR`: Pre-registration
+- `R`: Registered
+- `L`: Launched
+- `OL`: Outlicensed
+- `NDR`: No Development Reported
+- `DX`: Discontinued
+- `W`: Withdrawn
+
+## Development
+
+To set up for development:
+
+```bash
+# Clone the repository
+git clone https://github.com/uh-joan/mcp-cortellis.git
+cd mcp-cortellis
+
+# Create virtual environment and install dependencies
+uv venv
+source .venv/bin/activate  # On Unix/macOS
+# or
+.venv\Scripts\activate  # On Windows
+
+# Install in editable mode
+uv pip install -e .
+```
 
 ## License
 
