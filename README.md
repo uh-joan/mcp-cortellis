@@ -1,8 +1,46 @@
 # Cortellis MCP Server
 
-This MCP (Model Context Protocol) server provides an interface to search and explore the Cortellis database for drug-related information. It offers two main functionalities:
-- Drug search with various filters
-- Ontology/taxonomy term exploration
+[![Security: A](https://img.shields.io/badge/Security-A-green.svg)](https://github.com/uh-joan/mcp-cortellis/security)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Quality: A](https://img.shields.io/badge/Quality-A-green.svg)](https://github.com/uh-joan/mcp-cortellis)
+[![Platform: Linux](https://img.shields.io/badge/Platform-Linux-blue.svg)](https://github.com/uh-joan/mcp-cortellis)
+[![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg)](https://github.com/uh-joan/mcp-cortellis)
+
+A production-ready Model Context Protocol (MCP) server that enables AI assistants to search and explore pharmaceutical data through the Cortellis database. Perfect for drug discovery, clinical trial analysis, and pharmaceutical market research.
+
+## Features
+
+- 🔍 **Comprehensive Drug Search**
+  - Search by indication, phase, company, and more
+  - Real-time access to drug development statuses
+  - Detailed pharmaceutical data retrieval
+
+- 🧬 **Ontology Exploration**
+  - Explore standardized medical terminology
+  - Navigate drug classifications
+  - Discover relationships between terms
+
+- 🔐 **Secure Authentication**
+  - Environment-based credential management
+  - Secure API communication
+  - Rate limiting and request validation
+
+- 🛠 **Developer-Friendly**
+  - Clear API documentation
+  - Example scripts and use cases
+  - Easy integration with AI assistants
+
+## Architecture
+
+```mermaid
+graph LR
+    A[AI Assistant] --> B[MCP Server]
+    B --> C[Cortellis API]
+    C --> D[Drug Data]
+    C --> E[Ontology Data]
+    B --> F[Response Processing]
+    F --> A
+```
 
 ## Prerequisites
 
@@ -126,3 +164,28 @@ For development work, follow the [Local Installation](#local-installation-recomm
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Security Considerations
+
+- API credentials are stored securely in environment variables
+- All requests are authenticated and validated
+- Rate limiting is enforced to prevent abuse
+- HTTPS encryption for all API communications
+- Regular security audits and updates
+
+## Categories
+
+- Research & Data
+- Health & Wellness
+- Developer Tools
+- API Integration
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) before submitting changes.
+
+## Support
+
+- 📚 [Documentation](docs/API.md)
+- 💬 [GitHub Issues](https://github.com/uh-joan/mcp-cortellis/issues)
+- 📧 [Email Support](mailto:support@example.com)
