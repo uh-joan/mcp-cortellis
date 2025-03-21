@@ -188,4 +188,4 @@ Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTIN
 
 - 📚 [Documentation](docs/API.md)
 - 💬 [GitHub Issues](https://github.com/uh-joan/mcp-cortellis/issues)
-- 📧 [Email Support](mailto:support@example.com)
+- 📧 [Email Support](mailto:janisaez@gmail.com)
