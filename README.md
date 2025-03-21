@@ -101,10 +101,40 @@ When searching for drugs, you can use the following phase codes:
 - `DX`: Discontinued
 - `W`: Withdrawn
 
+## Using with Cursor IDE
+
+To use this MCP server with Cursor IDE:
+
+1. Install the server in your project:
+```bash
+uv pip install mcp-cortellis
+```
+
+2. Add the following to your `.cursor/settings.json`:
+```json
+{
+  "mcps": {
+    "cortellis": {
+      "command": ["python", "-m", "cortellis_mcp"],
+      "env": {
+        "CORTELLIS_USERNAME": "your_username",
+        "CORTELLIS_PASSWORD": "your_password"
+      }
+    }
+  }
+}
+```
+
+3. Restart Cursor IDE
+
+Now you can use the Cortellis MCP commands directly in Cursor. Example prompts:
+
+- "Search for drugs targeting obesity in phase 3"
+- "Find all launched drugs by Novo Nordisk"
+- "Explore ontology terms related to glucagon"
+
+The MCP server will automatically handle the API calls and return the results in a structured format.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
-[Your Contributing Guidelines Here] 
