@@ -1,6 +1,6 @@
 name: cortellis-mcp
 version: 1.0.0
-description: A production-ready MCP server enabling AI assistants to search and analyze pharmaceutical data through Cortellis.
+description: An MCP server enabling AI assistants to search and analyze pharmaceutical data through Cortellis API.
 
 build:
   type: docker
@@ -73,10 +73,16 @@ tools:
         description: "Active indications"
 
 categories:
-  - Research & Data
-  - Health & Wellness
-  - Developer Tools
-  - API Integration
+  - Life Sciences
+  - Competitive Intelligence
+  - Pharmaceutical Market Research
+  - Drug Discovery
+  - Clinical Research
+  - Regulatory Affairs
+  - Drug Development
+  - Pharmaceutical Manufacturing
+  - Pharmaceutical Distribution
+  - Pharmaceutical Sales
 
 platforms:
   - linux
@@ -85,5 +91,5 @@ platforms:
 repository: https://github.com/uh-joan/mcp-cortellis
 license: MIT
 author:
-  name: Joan Saez
+  name: Joan
   email: janisaez@gmail.com 
