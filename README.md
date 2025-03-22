@@ -7,7 +7,7 @@
 [![Type: MCP](https://img.shields.io/badge/Type-MCP-purple.svg)](https://github.com/uh-joan/mcp-cortellis)
 
 <!-- Package Info -->
-[![PyPI version](https://badge.fury.io/py/cortellis-mcp.svg)](https://pypi.org/project/cortellis-mcp/)
+[![PyPI version](https://img.shields.io/pypi/v/cortellis-mcp.svg)](https://pypi.org/project/cortellis-mcp/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
 [![PyPI - Downloads](https://img.shields.io/pypi/dm/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
 [![PyPI - Status](https://img.shields.io/pypi/status/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
@@ -74,7 +74,7 @@ graph LR
 
 ## Installation
 
-### From PyPI (Recommended)
+### 1. PyPI Installation (Recommended)
 
 ```bash
 # Using pip
@@ -84,16 +84,31 @@ pip install cortellis-mcp
 uv pip install cortellis-mcp
 ```
 
-### Local Installation (Development)
+### 2. Cursor IDE Integration
 
-1. Clone the repository:
-```bash
-git clone https://github.com/uh-joan/mcp-cortellis.git
-cd mcp-cortellis
+Add to your `.cursor/settings.json`:
+```json
+{
+  "mcps": {
+    "cortellis": {
+      "command": ["npx"],
+      "args": ["-y", "@smithery/cli@latest", "run", "@uh-joan/mcp-cortellis"],
+      "config": {
+        "username": "your_username",
+        "password": "your_password"
+      }
+    }
+  }
+}
 ```
 
-2. Install the package:
+### 3. Development Installation
+
 ```bash
+# Clone the repository
+git clone https://github.com/uh-joan/mcp-cortellis.git
+cd mcp-cortellis
+
 # Using uv (recommended)
 uv venv
 source .venv/bin/activate  # On Unix/macOS
@@ -109,23 +124,12 @@ source .venv/bin/activate  # On Unix/macOS
 pip install -e .
 ```
 
-3. Set up your environment variables:
+### Environment Setup
+
 ```bash
 # In your .env file
 CORTELLIS_USERNAME=your_username
 CORTELLIS_PASSWORD=your_password
-```
-
-### Alternative: Install from GitHub
-
-If you just want to use the package without development:
-
-```bash
-# Using uv
-uv pip install git+https://github.com/uh-joan/mcp-cortellis.git
-
-# Or using pip
-pip install git+https://github.com/uh-joan/mcp-cortellis.git
 ```
 
 ## Using with Cursor IDE
