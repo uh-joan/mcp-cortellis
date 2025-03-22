@@ -9,7 +9,6 @@
 <!-- Package Info -->
 [![PyPI version](https://img.shields.io/pypi/v/cortellis-mcp.svg)](https://pypi.org/project/cortellis-mcp/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
 [![PyPI - Status](https://img.shields.io/pypi/status/cortellis-mcp)](https://pypi.org/project/cortellis-mcp/)
 
 <!-- Technology Stack -->
@@ -17,12 +16,7 @@
 [![Docker: Ready](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://github.com/uh-joan/mcp-cortellis/blob/main/Dockerfile)
 [![Code Style: Ruff](https://img.shields.io/badge/Code%20Style-Ruff-black.svg)](https://github.com/astral-sh/ruff)
 
-<!-- Platform Support -->
-[![Platform: Linux](https://img.shields.io/badge/Platform-Linux-blue.svg)](https://github.com/uh-joan/mcp-cortellis)
-[![Platform: macOS](https://img.shields.io/badge/Platform-macOS-blue.svg)](https://github.com/uh-joan/mcp-cortellis)
-
 <!-- Repository Activity -->
-[![GitHub Stars](https://img.shields.io/github/stars/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis/stargazers)
 [![Last Commit](https://img.shields.io/github/last-commit/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis/commits/main)
 [![GitHub Issues](https://img.shields.io/github/issues/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis/issues)
 [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/uh-joan/mcp-cortellis)](https://github.com/uh-joan/mcp-cortellis/pulls)
